@@ -1,0 +1,5 @@
+Theme name:    Trancendances
+Description:   This is the default, shiny theme for Anchor CMS.
+Author name:   Frenchlabs
+Author site:   http://visualidiot.com
+License:       http://licence.visualidiot.com

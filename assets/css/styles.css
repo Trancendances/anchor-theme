@@ -1,0 +1,80 @@
+iframe.tracklists, .audio-player {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background:white;
+  border:none;
+  /* height:75%; -> track = 1 ligne */
+  height:70%; /* -> track = 2 lignes */
+  margin-top:15px;
+}
+
+iframe.tracklists {
+  border-radius:5px;
+}
+
+.audio-player { 
+  font-size: 62.5%; 
+  line-height: 1; 
+  float:left;
+  width:100%;
+  height:99%;
+  text-align:center;
+}
+
+/** audio player styles **/
+.audio-player, .audio-player div, .audio-player h2, .audio-player a, .audio-player span, .audio-player button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+div.audio-player {
+  position: relative;
+  margin: 0 auto;
+  background: #000000;
+  padding:6px;
+}
+.audio-player h2 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ececec;
+  padding-top:13px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.audio-player p {
+	color:white;
+	text-align:center;
+	margin-top:5px;
+	font-size:1em;
+}
+
+/* play/pause control */
+.mejs-controls .mejs-button button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+.mejs-controls .mejs-play button, .mejs-controls .mejs-pause button {
+  width: 64px;
+  height: 64px;
+  background: transparent url('playpause.png') 0 0 no-repeat;
+  float:left;
+}
+.mejs-controls .mejs-pause button { background-position: 0 -65px; }
+
+audio, #mep_0 {
+	margin-top:3px;
+	margin-left:3px;
+	float:left;
+}
+
+/** clearfix **/
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Player - Trancendances</title>
+
+  <link rel="stylesheet" href="./app.css?v=1">
+  <link href='http://fonts.googleapis.com/css?family=Doppio+One' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300,900,100italic,100,300italic,400italic,500,500italic,700italic,900italic' rel='stylesheet' type='text/css'>
+  <meta name="description" content="La Trance, vous connaissez ? Redécouvrez la musique électronique en compagnie de passionnés du genre !" />
+  <meta name="author" content="Trancendances" />
+  <meta name="identifier-url" content="http://www.trancendances.fr/" />
+  <meta property="og:description" content="La Trance, vous connaissez ? Redécouvrez la musique électronique en compagnie de passionnés du genre !" />
+  <meta property="og:url" content="http://www.trancendances.fr/" />
+  <meta property="og:site_name" content="Trancendances"/>
+  <meta property="og:image" content="http://www.trancendances.fr/themes/Trancendances/images/casque.jpg" />
+  <meta property="og:title" content="Trancendances" />
+  <link rel="alternate" type="application/rss+xml"  href="http://files.trancendances.fr/podcasts.xml" title="Trancendances : L'émission">
+  <script src="http://www.trancendances.fr/themes/Trancendances/javascripts/vendor/custom.modernizr.js"></script>
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css?v=8">
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+</head>
+<body>
+  <div id="player">
+    <div id="content">
+      <div class="audio-player">
+        <audio id="audio-player" src="http://live.mineboxradio.com:8000/live" type="audio/mpeg" controls="controls" autoplay></audio>
+        <h2>Trois ans de Trance<br />
+		Aux platines : <span id="artist"></span></h2>
+      </div><!-- @end .audio-player -->
+    </div><!-- @end #content -->
+  </div><!-- @end #w -->
+<script type="text/javascript">
+$(function(){
+  $('#audio-player').mediaelementplayer({
+    alwaysShowControls: true,
+    features: ['playpause'],
+    audioVolume: 'horizontal',
+    audioWidth: 64,
+    audioHeight: 64,
+    iPadUseNativeControls: true,
+    iPhoneUseNativeControls: true,
+    AndroidUseNativeControls: true
+  });
+});
+
+function Artist() {
+	var artist = document.getElementById('artist');
+	var today = new Date();
+	var hours = today.getHours();
+	
+	if(hours >= 12 && hours < 14) {
+		artist.innerHTML = "Brendan";
+	}
+	else if(hours >= 14 && hours < 16) {
+		artist.innerHTML = "Alex";
+	}
+	else if(hours >= 16 && hours < 17) {
+		artist.innerHTML = "Anthony Meral";
+	}
+	else if(hours >= 17 && hours < 18) {
+		artist.innerHTML = "Alex Wackii";
+	}
+	else if(hours >= 18 && hours < 19) {
+		artist.innerHTML = "Max Graham";
+	}
+	else if(hours >= 19 && hours < 20) {
+		artist.innerHTML = "Signum";
+	}
+	else if(hours >= 20 && hours < 21) {
+		artist.innerHTML = "Ferry Tayle";
+	}
+	else if(hours >= 21 && hours < 22) {
+		artist.innerHTML = "Manuel Le Saux";
+	}
+	else if(hours >= 22 && hours < 23) {
+		artist.innerHTML = "French Skies";
+	}
+	else if(hours >= 23) {
+		artist.innerHTML = "Stephane Badey";
+	}
+	else if(hours >= 0 && hours < 1) {
+		artist.innerHTML = "Lostly";
+	}
+	else if(hours >= 1 && hours < 2) {
+		artist.innerHTML = "Mario R";
+	}
+	tRebour = setTimeout("Artist();", 1000);
+}
+Artist();
+</script>
+</body>
+</html>

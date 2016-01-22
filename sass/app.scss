@@ -1,0 +1,287 @@
+@import "compass";
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+// @import "foundation/components/global"; // *always required
+// @import "foundation/components/grid";
+
+//
+// Use this grid if you want to start using the new Foundation 5 grid early.
+// It will change breakpoints to min-width: 640px and 1024px.
+//
+@import "foundation/components/grid-5";
+//
+
+// @import "foundation/components/visibility";
+// @import "foundation/components/block-grid";
+// @import "foundation/components/type";
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+// @import "foundation/components/flex-video";
+// @import "foundation/components/section";
+// @import "foundation/components/top-bar";  // *requires components/grid
+// @import "foundation/components/orbit";
+// @import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+// @import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+// @import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+// @import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+.grid-row {
+	@include grid-row;
+}
+
+a {
+	text-decoration: underline;
+}
+
+// HEADER
+
+body {
+	-webkit-font-smoothing:$font-smoothing;
+}
+body > header {
+	background-image:url("../images/header.png");
+	height:250px;
+	@include background-size(cover);
+	background-position: top center;
+
+	& > div {
+		@extend .grid-row;
+
+		#logo {
+			width: 566px;
+			height: 172px;
+			background-image: url("../images/logo.png");
+			@include background-size(contain);
+			background-repeat:no-repeat;
+			display: inline-block;
+			max-width:100%;
+		}
+
+	}
+}
+
+
+// NAV
+
+nav.top-bar {
+	& > section {
+		@extend .grid-row;
+	}
+	li {
+		font-size:20px;
+		font-weight:normal;
+		text-transform: uppercase;
+		
+
+		&.active > a {
+			background-color: $red;
+			@include transition(all .2s ease);
+			&:hover,&:active {
+				background-color: darken($red,10);
+			}
+		}
+	}
+
+	ul.title-area {
+		display: none;
+	}
+
+	@media #{$small} {
+		ul.title-area {
+			display: block;
+		}
+	}
+}
+
+// ARTICLES
+
+section.content {
+	@extend .grid-row;
+}
+
+section.content > article {	
+	@media #{$small} {
+		padding: emCalc(24px);
+	} 
+
+	@include grid-column(12);
+
+	margin-top: emCalc(50px);
+	& > header {
+		text-align: left;
+		margin-bottom: emCalc(15px);
+	}
+
+	& > header h2 {
+		margin-bottom: 0;
+	}
+	li {
+		margin-left:30px;
+	}
+
+}
+
+section.content > article.soiree-case {
+	@include grid-column(4);
+	min-height:255px;
+	float:left;
+
+	@media #{$small} {
+		@include grid-column(12);
+	}
+
+	text-align:center;
+	margin-bottom:3%;
+
+	p.link {
+		text-align:center;
+		font-weight:bold;
+	}
+
+	p {
+		margin-top:-10px;
+		text-align:left;
+	}
+
+	p.partytime {
+		margin-top:15px;
+	}
+	h4 {
+		font-size:120%;
+	}
+}
+
+body > footer {
+	@extend .grid-row;
+	text-align: center;
+	font-size: emCalc(11px);
+	color: lighten(black,40);
+       margin-top: emCalc(100px);
+}
+
+section.content h2 a, nav a, section.content > article.podcast-case h4 a {
+	text-decoration: none;
+}
+
+// Podcasts
+
+section.content > article.podcast-case {
+	@include grid-column(4);
+	min-height:255px;
+
+	@media #{$small} {
+		@include grid-column(12);
+	}
+}
+
+
+article.comments {
+
+	header > h2 {
+		margin-bottom: 2em;
+	}
+	p.name {
+width: 45%;
+float: left;
+       margin-right: 5%;
+	}
+
+	p.email {
+width: 50%;
+float: left;
+	}
+
+	p.textarea > textarea {
+height: 200px;
+	}
+
+	ul.commentlist {
+		list-style-type: none;
+
+		li.comment {
+padding:3em 1em;
+	h2 {
+		font-size:1.6em;
+
+		time {
+color: rgba(black,0.65);
+       font-size:.7em;
+       font-weight:normal;
+       font-style:italic;
+		}
+
+		span.counter {
+			font-size:.7em;
+color: rgba(black,.4);
+       margin-left: -1.6em;
+       font-weight:normal;
+       font-style:italic;
+		}
+	}
+	div.content {
+		font-size:1.3em;
+	}
+		}
+
+		li.comment:nth-child(even) {
+			// background:red;
+		}
+	}
+}
+
+
+h2.events {
+	margin-bottom:-30px;
+}
+
+p#contactus, p#countdown {
+	text-align:center;
+	margin-top:30px;
+}
+
+p#contactus {
+	margin-bottom:20px;
+}
+
+p#countdown {
+	margin-bottom:-20px;
+}
+
+.warning {
+	text-align:center;
+}
+p.podcasts-intro {
+	text-align:center;
+	border-radius:5px;
+	border:1px solid black;
+	width:49.3%;
+}

@@ -1,0 +1,26 @@
+<?php theme_include("header"); ?>
+<section role="content" class="content">
+    <article>
+        <header>
+          <h2>Podcasts &raquo;</h2>
+        </header>
+		<p class="podcasts-intro-first"><a href="/category/dark-side"><img src="/themes/Trancendances/images/podcast-dark-side.jpg" style="border-radius:8px;" /></a></p>
+		<p class="podcasts-intro" style="width:49.3%"><a href="/category/podcasts"><img src="/themes/Trancendances/images/podcast-trancendances.jpg" style="border-radius:8px;" /></a></p>
+		<p class="podcasts-intro-first"><a href="/category/past-present"><img src="/themes/Trancendances/images/podcast-pastpresent.png" /></a></p>
+		<p class="podcasts-intro" style="width:49.3%"><a href="/category/stode-friends-arena"><img src="/themes/Trancendances/images/podcast-stodefriendsarena.jpg" /></a></p>
+	</article>
+	<article>
+		<header>
+			<h2>Diffusion &raquo;</h2>
+		</header>
+		<p>Un nouveau podcast chaque mercredi à 19h !</p>
+		<ul>
+			<li>Première semaine du mois : Dark Side, par Ev&acirc;a Pearl</li>
+			<li>Seconde semaine du mois : Past &amp; Present, par Agerius</li>
+			<li>Troisième semaine du mois : Stode &amp; Friends Arena, par Stode et ses invit&eacute;s</li>
+			<li>Quatrième semaine du mois : Trancendances, l'émission, par Brendan</li>
+			<li>Cinquième semaine du mois (cas échéant) : Hors-série</li>
+		</ul>
+	</article>
+</section>
+<?php theme_include("footer"); ?>
