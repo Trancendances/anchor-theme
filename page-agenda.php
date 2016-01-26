@@ -18,7 +18,7 @@
 		?>
 	        <article class="soiree-case">
 		        <h4><a href="<?php echo article_url();?>"><?php echo article_title();?></h4>
-			<img src="<?php echo article_custom_field('soiree_affiche', 'If image not uploaded yet.'); ?>" /></a>
+			<img src="<?php echo article_custom_field('soiree_affiche', '/themes/Trancendances/images/agenda-default.jpg'); ?>" /></a>
 			<p class="partytime">Le <?php echo date('d/m/Y', $date); ?> (d&eacute;but à <?php echo date('G\hi', $date); ?>)</p>
 			<p class="location">Lieu : <?php echo article_custom_field('soiree_place'); ?></p>
 			<p class="artists">Avec <?php echo article_custom_field('soiree_artistes'); ?></p>
