@@ -1,36 +1,5 @@
 <?php theme_include("header"); ?>
 <section role="content" class="content">
-<script type="text/javascript">
-	function Rebour() {
-		var countdown = document.getElementById('countdown');
-		var today = new Date();
-		var bday = new Date(2015,7,17,12);
-		var journee = 24*3600; // Un jour en secondes
-		var sec = (bday - today)/1000; // Intervalle en secondes
-		if(sec > 0) {
-			var j = Math.floor(sec / journee); // Nombre de jours
-			var h = Math.floor((sec - j*journee)/3600); // Nombre d'heures
-			var mn = Math.floor((sec - (j*journee + h*3600))/60); // Nombre de minutes
-			var s = Math.floor(sec - (j*journee + h*3600 + mn*60)); // Nombre de secondes
-			if(j < 10) {
-				j = "0"+j;
-			}
-			if(h < 10) {
-				h = "0"+h;
-			}
-			if(mn < 10) {
-				mn = "0"+mn;
-			}
-			if(s < 10) {
-				s = "0"+s;
-			}
-			countdown.innerHTML = "D&eacute;but du troisi&egrave;me anniversaire de Trancendances dans :<br />"+j+"j "+h+"h "+mn+"mn "+s+"s<br /><a href=\"https://www.facebook.com/events/630215123741664/\">Rejoindre l'&eacute;v&eacute;nement</a>";
-		} else {
-			countdown.innerHTML = '<iframe src="http://www.trancendances.fr/themes/Trancendances/assets/tr.html" width="100%" height="77px" style="border:none" scrolling="no"></iframe>';
-		}
-	}
-	Rebour();
-</script>
 <article>
 <header class="nude-header">
   <h2>Dernier podcast &raquo;</h2>
