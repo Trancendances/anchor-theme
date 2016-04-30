@@ -1,6 +1,6 @@
 <footer>
-	<p><a href="http://www.trancendances.fr/">Trancendances</a> &copy; 2011-2016<br />
-	Site réalisé par <a href="http://www.frenchlabs.net/" target="_blank" title="Frenchlabs">Frenchlabs</a> - <a href="http://www.trancendances.fr/legals" target="_blank" title="Mentions légales">Mentions légales</a></p>
+	<p><a href="https://www.trancendances.fr/">Trancendances</a> &copy; 2011-2016<br />
+	Site réalisé par Frenchlabs - <a href="https://www.trancendances.fr/legals" target="_blank" title="Mentions légales">Mentions légales</a></p>
 </footer>
 <script>
 var base = '<?php echo theme_url(); ?>';
