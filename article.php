@@ -1,42 +1,44 @@
 <?php
 include("capcha.php");
-$_SESSION['captcha'] = generateRandomString(4,'1234567890'); 
-theme_include("header"); 
+$_SESSION['captcha'] = generateRandomString(4,'1234567890');
+theme_include("header");
 
 ?>
 <section role="content" class="content">
       <article>
         <header>
 		  <?php
-			if (article_category_slug() === "podcasts") {
+            // Determine if podcast
+            $isPodcast = true;
+            switch(article_category_slug()) {
+                case "podcasts":
+                    $itunesUrl = "https://itunes.apple.com/fr/podcast/trancendances/id520888552";
+                    break;
+                case "dark-side":
+                    $itunesUrl = "https://itunes.apple.com/fr/podcast/dark-side/id912453530";
+                    break;
+                case "stode-friends-arena":
+                    $itunesUrl = "https://itunes.apple.com/fr/podcast/stode-friends-arena/id920121670";
+                    break;
+                case "past-present":
+                    $itunesUrl = "https://itunes.apple.com/fr/podcast/past-present/id975869214";
+                    break;
+                default:
+                    $isPodcast = false;
+                    break;
+            }
+
+            if($isPodcast) {
+                $fileUrl = article_custom_field("podcast_file");
+                preg_match('/\/([^\/]+)$/', $fileUrl, $matches);
+                $fileName = $matches[1];
 				?>
 				<div style="float:right">
-					<a href="<?php echo article_custom_field("podcast_file"); ?>" title="Clic-droit sur l'icône, puis faites 'Enregistrer sous'"><img style="margin-right:10px;border:none" src="http://www.trancendances.fr/themes/Trancendances/images/download-97607_640.png"></a>
-					<a href="https://itunes.apple.com/fr/podcast/trancendances/id520888552" target="_blank"><img style="border:none" src="http://www.trancendances.fr/themes/Trancendances/images/itunes-icon.png"></a>
+					<a href="<?php echo $fileUrl; ?>" title="Clic-droit sur l'icône, puis faites 'Enregistrer sous'" download="<?php echo $fileName; ?>"><img style="margin-right:10px;border:none" src="http://www.trancendances.fr/themes/Trancendances/images/download-97607_640.png"></a>
+					<a href="<?php echo $itunesUrl; ?>" target="_blank"><img style="border:none" src="http://www.trancendances.fr/themes/Trancendances/images/itunes-icon.png"></a>
 				</div>
 				<?php
-			} else if (article_category_slug() === "dark-side") {
-				?>
-				<div style="float:right">
-					<a href="<?php echo article_custom_field("podcast_file"); ?>" title="Clic-droit sur l'icône, puis faites 'Enregistrer sous'"><img style="margin-right:10px;border:none" src="http://www.trancendances.fr/themes/Trancendances/images/download-97607_640.png"></a>
-					<a href="https://itunes.apple.com/fr/podcast/dark-side/id912453530" target="_blank"><img style="border:none" src="http://www.trancendances.fr/themes/Trancendances/images/itunes-icon.png"></a>
-				</div>
-				<?php
-			} else if (article_category_slug() === "stode-friends-arena") {
-				?>
-				<div style="float:right">
-					<a href="<?php echo article_custom_field("podcast_file"); ?>" title="Clic-droit sur l'icône, puis faites 'Enregistrer sous'"><img style="margin-right:10px;border:none" src="http://www.trancendances.fr/themes/Trancendances/images/download-97607_640.png"></a>
-					<a href="https://itunes.apple.com/fr/podcast/stode-friends-arena/id920121670" target="_blank"><img style="border:none" src="http://www.trancendances.fr/themes/Trancendances/images/itunes-icon.png"></a>
-				</div>
-				<?php
-			} else if (article_category_slug() === "past-present") {
-				?>
-				<div style="float:right">
-				  <a href="<?php echo article_custom_field("podcast_file"); ?>" title="Clic-droit sur l'icône, puis faites 'Enregistrer sous'"><img style="margin-right:10px;border:none" src="http://www.trancendances.fr/themes/Trancendances/images/download-97607_640.png"></a>
-				  <a href="https://itunes.apple.com/fr/podcast/past-present/id975869214"><img style="border:none" src="http://www.trancendances.fr/themes/Trancendances/images/itunes-icon.png"></a>
-				</div>
-				<?php
-			}
+            }
 		  ?>
           <h2><?php echo article_title(); ?></h2>
 		  <?php if(article_category_slug() === "soirees"):
@@ -45,7 +47,7 @@ theme_include("header");
 				$party_time = "23:59";
 			}
 			$date = strtotime(article_custom_field('date')." ".$party_time);
-			//if($date = strtotime(article_custom_field('date')." ".$party_time) > time()): 
+			//if($date = strtotime(article_custom_field('date')." ".$party_time) > time()):
 			if($party_time == "00:00") {
 				$date = $date - 86400;
 			}
@@ -58,11 +60,11 @@ theme_include("header");
         <section class="content-news">
         <?php if(article_category_slug() === "podcasts" || article_category_slug() === "dark-side" || article_category_slug() === "stode-friends-arena" || article_category_slug() === "past-present") {?>
         	<iframe width="100%" height="180" src="//www.mixcloud.com/widget/iframe/?feed=<?php echo urlencode(article_custom_field('podcast_url')); ?>&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=7b610803-1e1b-48bd-a518-d63e3cb18216&hide_tracklist=1&hide_cover=&autoplay=" frameborder="0"></iframe>
-        <?php 
+        <?php
 			} else if(article_category_slug() === "soirees") {
 				?>
 				<div style="float:right;margin-left:10px;"><img src="<?php echo article_custom_field('soiree_affiche', '/themes/Trancendances/images/agenda-default.jpg'); ?>" /></div>
-				<?php			
+				<?php
 			}?>
           <?php echo article_markdown(); ?>
         </section>
