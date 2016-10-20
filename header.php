@@ -148,15 +148,6 @@
 										    || (menu_name() == "Reviews" && strpos(current_url(), "reviews") !== false) || category_slug() == "reviews" && menu_name() == "Reviews" 
 											    || (strpos(current_url(), "/agenda") !== false && menu_name() == "Agenda") || ($category == "4" && menu_name() == "Agenda")):?>
         <li class="active"><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
-        <?php elseif( (strpos(current_url(), "category/releases-reports") !== false && menu_name() == "News") || (strpos(current_url(), "news/releases-rep") !== false && menu_name() == "News") 
-					|| (strpos(current_url(), "category/podcasts") !== false && menu_name() == "News") 
-						|| (menu_name() == "News" && strpos(current_url(), "dark-side") !== false) || category_slug() == "dark-side" && menu_name() == "News" 
-							|| (menu_name() == "News" && strpos(current_url(), "stode-friends-arena") !== false) || category_slug() == "stode-friends-arena" && menu_name() == "News" 
-								|| (menu_name() == "News" && strpos(current_url(), "past-present") !== false) || category_slug() == "past-present" && menu_name() == "News" 
-									|| (category_slug() == "podcasts" && menu_name() == "News") || (strpos(current_url(), "news/trancendances-recrute") !== false && menu_name() == "News") 
-										|| (strpos(current_url(), "category/reviews") !== false && menu_name() == "News") || (category_slug() == "reviews" && menu_name() == "News")
-											|| (article_slug() == "trancendances-recrute" && menu_name() == "News") || ($category == "4" && menu_name() == "News")):?>
-        <li><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
         <?php else: ?>
         <li <?php echo (menu_active() ? 'class="active"' : ''); ?>><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
         <?php endif; ?>
