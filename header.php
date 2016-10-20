@@ -146,12 +146,11 @@
 								    || (menu_name() == "Podcasts" && strpos(current_url(), "once-upon-a-time") !== false) || category_slug() == "once-upon-a-time" && menu_name() == "Podcasts" 
 									    || (menu_name() == "Rejoignez-nous" && strpos(current_url(), "recrutement") !== false) || article_slug() == "trancendances-recrute" && menu_name() == "Rejoignez-nous" 
 										    || (menu_name() == "Reviews" && strpos(current_url(), "reviews") !== false) || category_slug() == "reviews" && menu_name() == "Reviews" 
-											    || (strpos(current_url(), "/agenda") !== false && menu_name() == "Agenda") || ($category == "4" && menu_name() == "Agenda")
-											        || (strpos(current_url(), "/releases-reports") !== false && menu_name() == "Releases Report") || ($category == "3" && menu_name() == "Releases Report")):?>
+											    || (strpos(current_url(), "/agenda") !== false && menu_name() == "Agenda") || ($category == "4" && menu_name() == "Agenda")):?>
         <li class="active"><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
         <?php else: ?>
         <li <?php echo (menu_active() ? 'class="active"' : ''); ?>><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
-        <?php endif; ?> 
+        <?php endif; ?>
         <?php endwhile; ?>
 
       </ul>
