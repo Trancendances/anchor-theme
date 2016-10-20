@@ -138,7 +138,7 @@
     <?php if(has_menu_items()): ?>
       <ul class="left">
         <?php while(menu_items()): ?>
-        <?php if( (strpos(current_url(), "category/releases-reports") !== false && menu_name() == "Releases Reports") || (strpos(current_url(), "news/releases-rep") !== false && menu_name() == "Releases Reports") 
+        <?php if( (strpos(current_url(), "category/releases-reports") !== false && menu_name() == "Releases Report") || (strpos(current_url(), "news/releases-rep") !== false && menu_name() == "Releases Report") 
 					|| (menu_name() == "Podcasts" && strpos(current_url(), "podcasts") !== false) || category_slug() == "podcasts" && menu_name() == "Podcasts" 
 						|| (menu_name() == "Podcasts" && strpos(current_url(), "dark-side") !== false) || category_slug() == "dark-side" && menu_name() == "Podcasts" 
 							|| (menu_name() == "Podcasts" && strpos(current_url(), "stode-friends-arena") !== false) || category_slug() == "stode-friends-arena" && menu_name() == "Podcasts" 
