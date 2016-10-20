@@ -31,6 +31,12 @@ $cat_page = str_replace("category/", "", $current_url);
 			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/past-present/id975869214" target="_blank" />
 			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/pastpresent.xml" target="_blank" />
 		</map>
+	<?php elseif(strpos($cat_page, "once-upon-a-time") !== false): ?>
+		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="http://old.trancendances.fr/includes/design/itunes-rss.png" usemap="#podcasts-header" /></p>
+		<map name="podcasts-header">
+			<area shape="rect" coords="0,0,35,35" href="javascript:alert('Il arrive !');" target="_blank" />
+			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/onceuponatime.xml" target="_blank" />
+		</map>
 	<?php endif; ?>
     <?php while(posts()): ?>
 	<?php
@@ -38,7 +44,7 @@ $cat_page = str_replace("category/", "", $current_url);
 		$cat = $post->category;
 		if($cat != "4"):
 	?>
-      <?php if(strpos($cat_page, "podcasts") !== false || strpos($cat_page, "dark-side") !== false || strpos($cat_page, "stode-friends-arena") !== false || strpos($cat_page, "past-present") !== false): ?>
+      <?php if(strpos($cat_page, "podcasts") !== false || strpos($cat_page, "dark-side") !== false || strpos($cat_page, "stode-friends-arena") !== false || strpos($cat_page, "past-present") !== false || strpos($cat_page, "once-upon-a-time") !== false): ?>
         <article class="podcast-case">
         <iframe width="100%" height="180" src="//www.mixcloud.com/widget/iframe/?feed=<?php echo urlencode(article_custom_field('podcast_url')); ?>&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=7b610803-1e1b-48bd-a518-d63e3cb18216&hide_tracklist=1&hide_cover=&autoplay=" frameborder="0"></iframe>
         <header>

@@ -23,6 +23,9 @@ theme_include("header");
                 case "past-present":
                     $itunesUrl = "https://itunes.apple.com/fr/podcast/past-present/id975869214";
                     break;
+                case "once-upon-a-time":
+                    $itunesUrl = "javascript:alert('Il arrive !');";
+                    break;
                 default:
                     $isPodcast = false;
                     break;
@@ -58,7 +61,7 @@ theme_include("header");
 		  <?php endif; ?>
         </header>
         <section class="content-news">
-        <?php if(article_category_slug() === "podcasts" || article_category_slug() === "dark-side" || article_category_slug() === "stode-friends-arena" || article_category_slug() === "past-present") {?>
+        <?php if($isPodcast) { ?>
         	<iframe width="100%" height="180" src="//www.mixcloud.com/widget/iframe/?feed=<?php echo urlencode(article_custom_field('podcast_url')); ?>&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=7b610803-1e1b-48bd-a518-d63e3cb18216&hide_tracklist=1&hide_cover=&autoplay=" frameborder="0"></iframe>
         <?php
 			} else if(article_category_slug() === "soirees") {

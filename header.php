@@ -143,9 +143,10 @@
 						|| (menu_name() == "Podcasts" && strpos(current_url(), "dark-side") !== false) || category_slug() == "dark-side" && menu_name() == "Podcasts" 
 							|| (menu_name() == "Podcasts" && strpos(current_url(), "stode-friends-arena") !== false) || category_slug() == "stode-friends-arena" && menu_name() == "Podcasts" 
 								|| (menu_name() == "Podcasts" && strpos(current_url(), "past-present") !== false) || category_slug() == "past-present" && menu_name() == "Podcasts" 
-									|| (menu_name() == "Rejoignez-nous" && strpos(current_url(), "recrutement") !== false) || article_slug() == "trancendances-recrute" && menu_name() == "Rejoignez-nous" 
-										|| (menu_name() == "Reviews" && strpos(current_url(), "reviews") !== false) || category_slug() == "reviews" && menu_name() == "Reviews" 
-											|| (strpos(current_url(), "/agenda") !== false && menu_name() == "Agenda") || ($category == "4" && menu_name() == "Agenda")):?>
+								    || (menu_name() == "Podcasts" && strpos(current_url(), "once-upon-a-time") !== false) || category_slug() == "once-upon-a-time" && menu_name() == "Podcasts" 
+									    || (menu_name() == "Rejoignez-nous" && strpos(current_url(), "recrutement") !== false) || article_slug() == "trancendances-recrute" && menu_name() == "Rejoignez-nous" 
+										    || (menu_name() == "Reviews" && strpos(current_url(), "reviews") !== false) || category_slug() == "reviews" && menu_name() == "Reviews" 
+											    || (strpos(current_url(), "/agenda") !== false && menu_name() == "Agenda") || ($category == "4" && menu_name() == "Agenda")):?>
         <li class="active"><a href="<?php echo menu_url(); ?>" title="<?php echo menu_title(); ?>"><?php echo menu_name(); ?></a></li>
         <?php elseif( (strpos(current_url(), "category/releases-reports") !== false && menu_name() == "News") || (strpos(current_url(), "news/releases-rep") !== false && menu_name() == "News") 
 					|| (strpos(current_url(), "category/podcasts") !== false && menu_name() == "News") 
