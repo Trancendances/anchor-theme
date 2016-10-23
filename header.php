@@ -64,6 +64,7 @@
   <title><?php if(!empty($webpage_title)): echo $webpage_title; else:echo page_title('Adresse invalide'); endif; ?> - <?php echo site_name(); ?></title>
 
 
+  <link rel="shortcut icon" href="themes/Trancendances/favicon.ico">
   <link rel="stylesheet" href="<?php echo theme_url('stylesheets/app.css'); ?>">
   <link rel="stylesheet" href="<?php echo theme_url('stylesheets/form.css'); ?>">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:800' rel='stylesheet' type='text/css'>
