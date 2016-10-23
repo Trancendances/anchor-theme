@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 function generateRandomString($length,$characters) {
   $random_string = '';
   for ($i = 0; $i < $length; $i++) {
