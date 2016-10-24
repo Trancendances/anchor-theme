@@ -16,12 +16,12 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
             <itunes:name>Trancendances</itunes:name>
             <itunes:email>contact@trancendances.fr</itunes:email>
         </itunes:owner>
-        <itunes:image href="http://www.trancendances.fr/themes/Trancendances/images/logo-stodefriendsarena.jpg" />
+        <itunes:image href="http://files.trancendances.fr/logos/logo-stodefriendsarena.jpg" />
         <itunes:category text="Music" />
         <itunes:explicit>no</itunes:explicit>
 
         <image>
-		<url>http://www.trancendances.fr/themes/Trancendances/images/logo-stodefriendsarena.jpg</url>
+		<url>http://files.trancendances.fr/logos/logo-stodefriendsarena.jpg</url>
 		<title>Retrouvez Stode chaque mois pour une heure, accompagné par les meilleurs DJs Trance !</title>
 		<link>http://www.trancendances.fr/</link>
 	</image>
@@ -45,7 +45,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 				<itunes:summary><?php echo preg_replace('/&/','&amp;',article_description()); ?>
 			
 				Tracklist &amp; Infos sur http://www.trancendances.fr/podcasts</itunes:summary>
-				<itunes:image href="http://www.trancendances.fr/themes/Trancendances/images/logo-stodefriendsarena.jpg" />
+				<itunes:image href="http://files.trancendances.fr/logos/logo-stodefriendsarena.jpg" />
 				<enclosure type="<?php echo $type['Content-Type']; ?>" url="<?php echo $url; ?>" length="<?php echo $type['Content-Length']; ?>" />
 				<guid><?php echo $url; ?></guid>
 				<pubDate><?php echo article_custom_field("podcast_date"); ?> +0200</pubDate>

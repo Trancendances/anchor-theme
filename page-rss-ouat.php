@@ -5,7 +5,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
         <title>Once Upon A Time</title>
-        <link>http://www.trancendances.fr/</link>
+        <link>https://www.trancendances.fr/</link>
         <language>fr-FR</language>
         <copyright>Trancendances</copyright>
         <itunes:subtitle>Chaque mois, Stode vous raconte une nouvelle histoire musicale.</itunes:subtitle>
@@ -16,14 +16,14 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
             <itunes:name>Trancendances</itunes:name>
             <itunes:email>contact@trancendances.fr</itunes:email>
         </itunes:owner>
-        <itunes:image href="http://www.trancendances.fr/themes/Trancendances/images/logo-onceuponatime.jpg" />
+        <itunes:image href="http://files.trancendances.fr/logos/logo-onceuponatime.jpg" />
         <itunes:category text="Music" />
         <itunes:explicit>no</itunes:explicit>
 
         <image>
-		<url>http://www.trancendances.fr/themes/Trancendances/images/logo-onceuponatime.jpg</url>
-		<title>Retrouvez Stode chaque mois pour une heure, accompagné par les meilleurs DJs Trance !</title>
-		<link>http://www.trancendances.fr/</link>
+		<url>http://files.trancendances.fr/logos/logo-onceuponatime.jpg</url>
+		<title>Chaque mois, Stode vous raconte une nouvelle histoire musicale.</title>
+		<link>https://www.trancendances.fr/</link>
 	</image>
 
 	<?php $displayCats = array(11); ?>
@@ -39,13 +39,13 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 				<title><?php echo article_title(); ?></title>
 				<description><?php echo preg_replace('/&/','&amp;',article_description()); ?>
 			
-				Tracklist &amp; Infos sur http://www.trancendances.fr/podcasts</description>
+				Tracklist &amp; Infos sur https://www.trancendances.fr/podcasts</description>
 				<itunes:author>Evâa Pearl</itunes:author>
 				<itunes:subtitle><?php echo article_title(); ?></itunes:subtitle>
 				<itunes:summary><?php echo preg_replace('/&/','&amp;',article_description()); ?>
 			
-				Tracklist &amp; Infos sur http://www.trancendances.fr/podcasts</itunes:summary>
-				<itunes:image href="http://www.trancendances.fr/themes/Trancendances/images/logo-onceuponatime.jpg" />
+				Tracklist &amp; Infos sur https://www.trancendances.fr/podcasts</itunes:summary>
+				<itunes:image href="http://files.trancendances.fr/logos/logo-onceuponatime.jpg" />
 				<enclosure type="<?php echo $type['Content-Type']; ?>" url="<?php echo $url; ?>" length="<?php echo $type['Content-Length']; ?>" />
 				<guid><?php echo $url; ?></guid>
 				<pubDate><?php echo article_custom_field("podcast_date"); ?> +0200</pubDate>
