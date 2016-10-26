@@ -71,13 +71,13 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300,900,100italic,100,300italic,400italic,500,500italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <meta name="description" content="<?php if(!empty($webpage_description)): echo htmlspecialchars($webpage_description); else: echo "La Trance, vous connaissez ? Redécouvrez la musique électronique en compagnie de passionnés du genre !"; endif; ?>" />
   <meta name="author" content="<?php if(!empty($webpage_author)): echo $webpage_author; else: echo "Trancendances"; endif; ?>" />
-  <meta name="identifier-url" content="http://www.trancendances.fr/" />
+  <meta name="identifier-url" content="https://www.trancendances.fr/" />
   <meta property="og:description" content="<?php if(!empty($webpage_description)): echo $webpage_description; else: echo "La Trance, vous connaissez ? Redécouvrez la musique électronique en compagnie de passionnés du genre !"; endif; ?>" />
   <meta property="og:url" content="https://www.trancendances.fr/<?php if($current_url != "/"): echo current_url(); endif; ?>" />
   <meta property="og:site_name" content="Trancendances"/>
   <meta property="og:image" content="https://www.trancendances.fr<?php if($category == "4") { echo article_custom_field('soiree_affiche', '/themes/Trancendances/images/website-thumbnail-default.jpg'); } else if(!empty($webpage_picture)) { echo $webpage_picture; } else { ?>/themes/Trancendances/images/website-thumbnail-default.jpg<?php } ?>" />
   <meta property="og:title" content="<?php if(!empty($webpage_name)): echo $webpage_name." - "; endif; ?>Trancendances" />
-  <link rel="alternate" type="application/rss+xml"  href="https://files.trancendances.fr/podcasts.xml" title="Trancendances : L'émission">
+  <link rel="alternate" type="application/rss+xml"  href="http://files.trancendances.fr/podcasts.xml" title="Trancendances : L'émission">
 <?php 
 	/*if($category == "2"):
   ?>
@@ -95,7 +95,7 @@
   <meta name="twitter:description" content="<?php if(!empty($webpage_description)): echo $webpage_description; endif; ?>">
   <meta name="twitter:creator" content="@<?php if(!empty($post)): if($post->author == "1"): echo "BrenAbolivier"; elseif($post->author == "3"): echo "Supra263"; elseif($post->author == "4"): echo "StodeSound"; elseif($post->author == "6"): echo "AgeriusMusic"; else: echo "Trancendances"; endif; else: echo "Trancendances"; endif; ?>">
   <meta name="twitter:domain" content="www.trancendances.fr">
-  <meta name="twitter:image:src" content="http://www.trancendances.fr/themes/Trancendances/images/casque.jpg" />
+  <meta name="twitter:image:src" content="https://www.trancendances.fr/themes/Trancendances/images/casque.jpg" />
 
 <?php endif; ?>
 <!-- Piwik -->

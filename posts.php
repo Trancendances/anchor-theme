@@ -8,31 +8,31 @@ $cat_page = str_replace("category/", "", $current_url);
 ?>
   <?php if(has_posts()): ?>
     <?php if(strpos($cat_page, "podcasts") !== false): ?>
-		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="http://old.trancendances.fr/includes/design/itunes-rss.png" usemap="#podcasts-header" /></p>
+		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="https://www.trancendances.fr/themes/Trancendances/images/itunes-rss.png" usemap="#podcasts-header" /></p>
 		<map name="podcasts-header">
 			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/trancendances/id520888552" target="_blank" />
 			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/podcasts.xml" target="_blank" />
 		</map>
 	<?php elseif(strpos($cat_page, "dark-side") !== false): ?>
-		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="http://old.trancendances.fr/includes/design/itunes-rss.png" usemap="#podcasts-header" /></p>
+		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="https://www.trancendances.fr/themes/Trancendances/images/itunes-rss.png" usemap="#podcasts-header" /></p>
 		<map name="podcasts-header">
 			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/dark-side/id912453530" target="_blank" />
 			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/darkside.xml" target="_blank" />
 		</map>
 	<?php elseif(strpos($cat_page, "stode-friends-arena") !== false): ?>
-		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="http://old.trancendances.fr/includes/design/itunes-rss.png" usemap="#podcasts-header" /></p>
+		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img srr="https://www.trancendances.fr/themes/Trancendances/images/itunes-rss.png" usemap="#podcasts-header" /></p>
 		<map name="podcasts-header">
 			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/stode-friends-arena/id920121670" target="_blank" />
 			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/stodefriendsarena.xml" target="_blank" />
 		</map>
 	<?php elseif(strpos($cat_page, "past-present") !== false): ?>
-		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="http://old.trancendances.fr/includes/design/itunes-rss.png" usemap="#podcasts-header" /></p>
+		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="https://www.trancendances.fr/themes/Trancendances/images/itunes-rss.png" usemap="#podcasts-header" /></p>
 		<map name="podcasts-header">
 			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/past-present/id975869214" target="_blank" />
 			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/pastpresent.xml" target="_blank" />
 		</map>
 	<?php elseif(strpos($cat_page, "once-upon-a-time") !== false): ?>
-		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="http://old.trancendances.fr/includes/design/itunes-rss.png" usemap="#podcasts-header" /></p>
+		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="https://www.trancendances.fr/themes/Trancendances/images/itunes-rss.png" usemap="#podcasts-header" /></p>
 		<map name="podcasts-header">
 			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/once-upon-a-time/id1168657936" target="_blank" />
 			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/onceuponatime.xml" target="_blank" />

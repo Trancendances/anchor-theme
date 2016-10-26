@@ -37,8 +37,8 @@ theme_include("header");
                 $fileName = $matches[1];
 				?>
 				<div style="float:right">
-					<a href="<?php echo $fileUrl; ?>" title="Clic-droit sur l'icône, puis faites 'Enregistrer sous'" download="<?php echo $fileName; ?>"><img style="margin-right:10px;border:none" src="http://www.trancendances.fr/themes/Trancendances/images/download-97607_640.png"></a>
-					<a href="<?php echo $itunesUrl; ?>" target="_blank"><img style="border:none" src="http://www.trancendances.fr/themes/Trancendances/images/itunes-icon.png"></a>
+					<a href="<?php echo $fileUrl; ?>" title="Clic-droit sur l'icône, puis faites 'Enregistrer sous'" download="<?php echo $fileName; ?>"><img style="margin-right:10px;border:none" src="https://www.trancendances.fr/themes/Trancendances/images/download-97607_640.png"></a>
+					<a href="<?php echo $itunesUrl; ?>" target="_blank"><img style="border:none" src="https://www.trancendances.fr/themes/Trancendances/images/itunes-icon.png"></a>
 				</div>
 				<?php
             }
