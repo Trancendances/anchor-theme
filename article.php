@@ -24,7 +24,7 @@ theme_include("header");
                     $itunesUrl = "https://itunes.apple.com/fr/podcast/past-present/id975869214";
                     break;
                 case "once-upon-a-time":
-                    $itunesUrl = "javascript:alert('Il arrive !');";
+                    $itunesUrl = "https://itunes.apple.com/fr/podcast/once-upon-a-time/id1168657936";
                     break;
                 default:
                     $isPodcast = false;
