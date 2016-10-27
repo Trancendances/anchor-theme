@@ -1,34 +1,13 @@
-div#form_div_name {
+div#form_name {
 	width: 50%;
 	float: left;
 }
 
-div#form_div_mail {
+div#form_addr {
 	width: 49%;
 	float: right;
 }
 
-div#form_div_copy {
-	margin-bottom: 20px;
-}
-
-div#form_div_copy label#form_label_copy {
-	display: inline;
-	margin-left: 10px;
-}
-
-div#form_div_copy input#form_copy {
-	float: left;
-}
-
-div#form_div_message textarea#form_message {
+div#form_text #form_text_textarea {
 	height: 150px;
-}
-
-div#contact_done {
-	text-transform: lowercase;
-}
-
-div#contact_done:first-letter {
-	text-transform: uppercase;
 }
