@@ -24,5 +24,13 @@
 			<li>Cinquième semaine du mois (cas échéant) : Hors-série</li>
 		</ul>
 	</article>
+	<article>
+		<header>
+			<h2>Podcasts arr&ecirc;t&eacute;s &raquo;</h2>
+			<p>Des podcasts qui sont sortis sur Trancendances, mais qui sont arr&ecirc;t&eacute;s ou en pause actuellement.</p>
+		</header>
+		<p class="podcasts-intro-first"><a href="/category/stode-friends-arena"><img src="/themes/Trancendances/images/podcast-stodefriendsarena.jpg" /></a></p>
+		<p class="podcasts-intro"><a href="/category/podcasts"><img src="/themes/Trancendances/images/podcast-trancendances.jpg" style="border-radius:8px;" /></a></p>
+	</article>
 </section>
 <?php theme_include("footer"); ?>
