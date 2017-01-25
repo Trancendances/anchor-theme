@@ -26,6 +26,9 @@ theme_include("header");
                 case "once-upon-a-time":
                     $itunesUrl = "https://itunes.apple.com/fr/podcast/once-upon-a-time/id1168657936";
                     break;
+                case "french-touch":
+                    $itunesUrl = "javascript:alert('Bientot !');";
+                    break;
                 default:
                     $isPodcast = false;
                     break;

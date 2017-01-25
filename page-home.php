@@ -4,7 +4,7 @@
 <header class="nude-header">
   <h2>Dernier podcast &raquo;</h2>
 </header>
-<?php $displayCats = array(2,5,8,9,11); ?>
+<?php $displayCats = array(2,5,8,9,11,12); ?>
 <?php $count = 0; ?>
 <?php while(post_list()): ?>
     <?php foreach($displayCats as $cat): ?>
