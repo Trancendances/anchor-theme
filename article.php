@@ -65,7 +65,7 @@ theme_include("header");
         </header>
         <section class="content-news">
         <?php if($isPodcast) { ?>
-        	<iframe width="100%" height="180" src="//www.mixcloud.com/widget/iframe/?feed=<?php echo urlencode(article_custom_field('podcast_url')); ?>&mini=&stylecolor=&hide_artwork=1&embed_type=widget_standard&embed_uuid=7b610803-1e1b-48bd-a518-d63e3cb18216&hide_tracklist=1&hide_cover=&autoplay=" frameborder="0"></iframe>
+        	<iframe width="100%" height="180" src="//www.mixcloud.com/widget/iframe/?feed=<?php echo urlencode(article_custom_field('podcast_url')); ?>&hide_cover=1&light=1" frameborder="0"></iframe>
         <?php
 			} else if(article_category_slug() === "soirees") {
 				?>
