@@ -1,5 +1,5 @@
 <footer>
-	<p><a href="https://www.trancendances.fr/">Trancendances</a> &copy; 2011-2016<br />
+	<p><a href="https://www.trancendances.fr/">Trancendances</a> &copy; 2011-2017<br />
 	Site réalisé par Frenchlabs - <a href="https://www.trancendances.fr/legals" target="_blank" title="Mentions légales">Mentions légales</a></p>
 </footer>
 <script>
