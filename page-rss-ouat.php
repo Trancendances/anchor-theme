@@ -40,7 +40,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
 				<description><?php echo preg_replace('/&/','&amp;',article_description()); ?>
 			
 				Tracklist &amp; Infos sur https://www.trancendances.fr/podcasts</description>
-				<itunes:author>Evâa Pearl</itunes:author>
+				<itunes:author>Stode</itunes:author>
 				<itunes:subtitle><?php echo article_title(); ?></itunes:subtitle>
 				<itunes:summary><?php echo preg_replace('/&/','&amp;',article_description()); ?>
 			
