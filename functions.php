@@ -204,6 +204,12 @@ function post_list() {
   return $result;
 }
 
+function article_category_id() {
+  if($category = Registry::prop('article', 'category')) {
+    $categories = Registry::get('all_categories');
+    return $categories[$category]->id;
+  }
+}
 
 /****************************************/
 /*            FONCTIONS API             */
