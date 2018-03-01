@@ -28,7 +28,7 @@ $cat_page = str_replace("category/", "", $current_url);
 	<?php elseif(strpos($cat_page, "past-present") !== false): ?>
 		<p style="text-align:right;margin-top:20px;margin-right:15px;margin-bottom:-40px"><img src="https://www.trancendances.fr/themes/Trancendances/images/itunes-rss.png" usemap="#podcasts-header" /></p>
 		<map name="podcasts-header">
-			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/past-present/id975869214" target="_blank" />
+			<area shape="rect" coords="0,0,35,35" href="https://itunes.apple.com/fr/podcast/past-present/id1354424221" target="_blank" />
 			<area shape="rect" coords="45,0,80,35" href="http://files.trancendances.fr/pastpresent.xml" target="_blank" />
 		</map>
 	<?php elseif(strpos($cat_page, "once-upon-a-time") !== false): ?>
@@ -59,7 +59,7 @@ $cat_page = str_replace("category/", "", $current_url);
         </article>
     <?php else:?>
         <?php theme_include("loop"); ?>
-      <?php endif; 
+      <?php endif;
 		endif; ?>
     <?php endwhile; ?>
   <?php endif; ?>
